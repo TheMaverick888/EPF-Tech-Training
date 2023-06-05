@@ -1,8 +1,14 @@
-def primefactor(x):
-    i=2
-    while i * i< x:
-       while x % i==0:
-             x //= i  
-       i+=1         
-    print(int(x))         
-primefactor(600851475143)         
+def largest_factor(num):
+    largestprime = 0
+    factor = 2  # Starting with the smallest prime factor
+    while factor * factor <= num:
+        if num % factor == 0:
+            largestprime = factor
+            num //= factor
+        
+        factor += 1
+    if num > largestprime:
+        largestprime = num
+    return largestprime
+
+print(largest_factor(600851475143))
