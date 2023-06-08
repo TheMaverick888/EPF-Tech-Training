@@ -1,6 +1,6 @@
 def largest_factor(num):
     largestprime = 0
-    factor = 2  # Starting with the smallest prime factor
+    factor = 2  
     while factor * factor <= num:
         if num % factor == 0:
             largestprime = factor
