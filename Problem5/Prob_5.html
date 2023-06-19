@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script>
+    function smallestMultiple() {
+        for(let x = 20; ; x++ ){
+            let quotientIsDivisible = true;
+            for(let y = 2; y < 21; y++ ){
+                if(x%y !== 0){
+                    quotientIsDivisible = false;
+                    break;
+                }
+            }
+            if(quotientIsDivisible){
+                console.log(x);
+                break;
+            }
+        }
+    }
+    smallestMultiple();   
+</script>
+</html>
